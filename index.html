@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Héritage GO is the community for heritage lovers.">
+	<title>Héritage GO</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/site.webmanifest">
+	<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+</head>
+<body>
+    <div id="header-container">
+        <div class="login-section"></div>
+
+        <div id="feed-section">
+            <div id="logo-section">
+                <img src="./img/heritagego_logo_128x73.png" alt="heritage logo" width="100px" style="vertical-align:middle">
+            </div>
+            
+            <div id="area-icon-section">
+                <div class="compass">
+                    <i class="far fa-compass" aria-hidden="true" type="width:24px height:24px" style="margin-left: 6px" id="compass"></i>
+
+                </div>
+
+                <div>
+                    <p style="font-family:Arial;font-size:18px;text-align: center;margin: 0px">Ho Chi Minh City</p>
+                    <p style="font-family:Arial;font-size:14px;text-align: center;margin: 0px">Vietnam</p>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div id="login-section">
+            <button type="button"
+                    style="font-size:14px;border-color:rgb(230, 230, 230);border-radius:6px;"
+                    class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Log In</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><b>Log in</b></h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="flex-row">
+                        <div class="field">
+                            <input type="text" name="email" id="email" required>
+                            <label for="email">email</label>
+                        </div>
+                    </div>
+
+
+                    <div class="flex-row">
+                        <div class="field">
+                            <input type="password" name="password" id="password" required>
+                            <label for="password">password</label>
+                        </div>
+                        
+                        <div class="field-lock">
+                            <i class="fas fa-lock" onclick="change_icon()" id="icon"></i>
+                        </div>
+                        
+                    </div>
+                
+                    <button type="button" class="login-style" data-dismiss="modal">Log in</button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="new-feed-container">
+        <div class="new-feed">
+        
+            <div class="info-flex-row">
+                <img src="./img/avatar.png" alt="user avatar" width="40px" height="40px" style="vertical-align:middle">
+                
+                <div class="caption">
+                    <div class="info-flex-row">
+                        <p style="font-size: 30px;margin:0px;">ninh son</p>
+                        <i class="fas fa-language"></i>
+                    </div>
+
+                    <div class="location-time">
+                        <i class="fas fa-map-marker-alt">Vung Tau, Viet Nam</i>
+                        <i class="far fa-clock">2050</i>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <img class="image-style" src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/2c/a6/1d/conrad-maldives-rangali.jpg" alt="myhouse">
+            
+            <div class="info-flex-row">
+                <div class="location-time">
+                    <i class="fas fa-heart fa-lg">10k</i>
+                    <i class="fas fa-comment fa-lg">50k</i>
+                    <i class="fas fa-camera fa-lg">100</i>
+                </div>
+
+                <i class="fas fa-bookmark fa-lg"></i>
+            </div>
+
+            
+            <input type="text">
+            
+            
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
+    </script>
+    <script src="js/heritagego-service.1.0.0.js"></script>
+    <script>
+        function change_icon(){
+            var x = document.getElementById("icon");
+            x.classList.toggle("fa-unlock-alt");
+
+            x = document.getElementById("password");
+            if (x.type === "password")
+            {
+                x.type = "text";
+            } else 
+            {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

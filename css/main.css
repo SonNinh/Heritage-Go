@@ -1,0 +1,224 @@
+.body-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fafafa;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    position: fixed;
+}
+
+#feed-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    width: 600px;
+    font-size: 30px;
+}
+
+#login-section {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 24px;
+    margin-left: 24px; 
+}
+
+#logo-section {
+    display: block;
+    width: fit-content;
+    margin-left: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: transform 100ms;
+}
+#logo-section:hover {
+    transform: scale(1.1,1.1); /* Standard syntax */
+    transition: transform 100ms;
+}
+
+#area-icon-section {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#area-icon-section > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+#compass {
+    animation-name: compass;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes compass {
+    from {
+        transform: rotate(0deg); /* Standard syntax */
+    }
+    to {
+        transform: rotate(360deg); /* Standard syntax */
+    }
+}
+
+.login-style {
+    color: rgb(255, 255, 255);
+    background-color: cornflowerblue;
+    width: 100%;
+    border: 0px;
+    border-radius: 3px;
+    border-color: #fafafa;
+    height: 40px;
+    margin-top: 20px;
+
+}
+
+.login-style:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(23, 97, 235);
+}
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    width: 100%;
+}
+.field-lock{
+    display: flex;
+    flex-flow: column-reverse;
+    width: min-content;
+    margin: 5px;
+}
+
+label, input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    font-size: 1.5em;
+    border: 0;
+    font-family: inherit;
+    border-radius: 0;
+    padding: 0px;
+    width: 100%;
+}
+
+input:focus {
+    outline: 0;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: fit-content
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:not(:focus) + label, input:invalid + label{
+    /* cursor: text; */
+    transform-origin: left bottom;
+    transform: translate(0, 3rem) scale(1.5);
+    color: rgba(0, 0, 0, 0.0975)
+}
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:focus + label, input:valid + label{
+    transform-origin: left bottom;
+    transform: translate(0, 0) scale(1);
+    /* cursor: pointer; */
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.new-feed-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid rgba(253, 2, 2, 0.098);
+    margin-top: 80px;
+}
+
+.new-feed{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 2px solid gray;
+}
+
+.info-flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.caption{
+    width: 100%;
+    margin-left: 10px;
+}
+
+
+.location-time{
+    display: flex;
+    margin: 8px;
+}
+
+.fas{
+    margin-right: 10px;
+}
+
+.image-style{
+    width: 100%;
+    height: auto;
+}
+
+.comment{
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.new-feed input{
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+}
