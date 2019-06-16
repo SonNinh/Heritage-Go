@@ -22,6 +22,85 @@
 
 </head>
 <body>
+    <div class="new-feed-container">
+        <div id="new-feed">
+        
+            <div class="info-flex-row">
+                <img src="./img/avatar.png" alt="user avatar" width="40px" height="40px" style="vertical-align:middle">
+                
+                <div class="caption">
+                    <div class="info-flex-row">
+                        <p style="font-size: 30px;margin:0px;">ninh son</p>
+                        <i class="fas fa-language"></i>
+                    </div>
+
+                    <div class="location-time">
+                        <i class="fas fa-map-marker-alt">Vung Tau, Viet Nam</i>
+                        <i class="far fa-clock">2050</i>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <img class="image-style" src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/2c/a6/1d/conrad-maldives-rangali.jpg" alt="myhouse">
+            
+            <div class="info-flex-row">
+                <div class="location-time">
+                    <i class="fas fa-heart fa-lg">10k</i>
+                    <i class="fas fa-comment fa-lg">50k</i>
+                    <i class="fas fa-camera fa-lg">100</i>
+                </div>
+                <i class="fas fa-bookmark fa-lg"></i>
+            </div>
+
+            <input type="text">
+            
+        </div>
+
+        <div id="new-feed">
+        
+            <div class="info-flex-row">
+                <img src="./img/avatar.png" alt="user avatar" width="40px" height="40px" style="vertical-align:middle">
+                
+                <div class="caption">
+                    <div class="info-flex-row">
+                        <p style="font-size: 30px;margin:0px;">ninh son</p>
+                        <i class="fas fa-language"></i>
+                    </div>
+
+                    <div class="location-time">
+                        <i class="fas fa-map-marker-alt">Vung Tau, Viet Nam</i>
+                        <i class="far fa-clock">2050</i>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <img class="image-style" src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/2c/a6/1d/conrad-maldives-rangali.jpg" alt="myhouse">
+            
+            <div class="info-flex-row">
+                <div class="location-time">
+                    <i class="fas fa-heart fa-lg">10k</i>
+                    <i class="fas fa-comment fa-lg">50k</i>
+                    <i class="fas fa-camera fa-lg">100</i>
+                </div>
+                <i class="fas fa-bookmark fa-lg"></i>
+            </div>
+
+            <input type="text">
+            
+        </div>  
+    </div>
+
+    <div id="clone-feed-container">
+        <div id="clone-feed">
+            
+        </div>
+    </div>
+
+    <div class="buffer">
+    </div>
+
     <div id="header-container">
         <div class="login-section"></div>
 
@@ -36,7 +115,7 @@
 
                 </div>
 
-                <div>
+                <div class="area-section">
                     <p style="font-family:Arial;font-size:18px;text-align: center;margin: 0px">Ho Chi Minh City</p>
                     <p style="font-family:Arial;font-size:14px;text-align: center;margin: 0px">Vietnam</p>
                     
@@ -51,7 +130,13 @@
                     style="font-size:14px;border-color:rgb(230, 230, 230);border-radius:6px;"
                     class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Log In</button>
         </div>
+        
+    
     </div>
+
+
+
+
 
 
     <!-- Modal -->
@@ -94,45 +179,7 @@
         </div>
     </div>
 
-    <div class="new-feed-container">
-        <div class="new-feed">
-        
-            <div class="info-flex-row">
-                <img src="./img/avatar.png" alt="user avatar" width="40px" height="40px" style="vertical-align:middle">
-                
-                <div class="caption">
-                    <div class="info-flex-row">
-                        <p style="font-size: 30px;margin:0px;">ninh son</p>
-                        <i class="fas fa-language"></i>
-                    </div>
 
-                    <div class="location-time">
-                        <i class="fas fa-map-marker-alt">Vung Tau, Viet Nam</i>
-                        <i class="far fa-clock">2050</i>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <img class="image-style" src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/2c/a6/1d/conrad-maldives-rangali.jpg" alt="myhouse">
-            
-            <div class="info-flex-row">
-                <div class="location-time">
-                    <i class="fas fa-heart fa-lg">10k</i>
-                    <i class="fas fa-comment fa-lg">50k</i>
-                    <i class="fas fa-camera fa-lg">100</i>
-                </div>
-
-                <i class="fas fa-bookmark fa-lg"></i>
-            </div>
-
-            
-            <input type="text">
-            
-            
-            
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
     </script>
@@ -150,6 +197,15 @@
             {
                 x.type = "password";
             }
+        }
+    </script>
+        
+    <script>
+        window.onscroll = function()
+        {
+            document.getElementById("clone-feed").innerHTML = document.getElementById("new-feed").innerHTML;
+            document.getElementById("clone-feed-container").scrollTop = window.scrollY;
+
         }
     </script>
 </body>
